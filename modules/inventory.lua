@@ -31,7 +31,7 @@ end
 --- @param count number The quantity of the item to remove.
 function RemoveItemFromInventory(item, count)
     if inventorySystem == "ox_inventory" then
-        TriggerServerEvent("AddItem:Qb", item, count)
+        TriggerServerEvent("RemoveItem:Ox", item, count)
     elseif inventorySystem == "qb-inventory" then
         TriggerServerEvent("RemoveItem:Qb", item, count)
     else
