@@ -18,9 +18,9 @@ end)
 --- @param count number The quantity of the item to add.
 function AddItemToInventory(item, count)
     if inventorySystem == "ox_inventory" then
-        TriggerServerEvent("ox_inventory:addItem", item, count)
+        TriggerServerEvent("AddItem:Ox", item, count)
     elseif inventorySystem == "qb-inventory" then
-        TriggerServerEvent("inventory:server:AddItem", item, count)
+        TriggerServerEvent("AddItem:Qb", item, count)
     else
         print("[ERROR] No inventory system active. Cannot add items.")
     end
@@ -31,9 +31,9 @@ end
 --- @param count number The quantity of the item to remove.
 function RemoveItemFromInventory(item, count)
     if inventorySystem == "ox_inventory" then
-        TriggerServerEvent("ox_inventory:removeItem", item, count)
+        TriggerServerEvent("AddItem:Qb", item, count)
     elseif inventorySystem == "qb-inventory" then
-        TriggerServerEvent("inventory:server:RemoveItem", item, count)
+        TriggerServerEvent("RemoveItem:Qb", item, count)
     else
         print("[ERROR] No inventory system active. Cannot remove items.")
     end
